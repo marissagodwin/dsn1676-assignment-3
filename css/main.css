@@ -25,10 +25,17 @@ html {
     animation-direction (normal, reverse, alternate)
 */ 
 
+.black {
+    background-color: black;
+}
+
 .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/stars.svg);
     background-color: black;
-    animation: zoom;
+    animation: stars 10s ease-in-out infinite;
 }
 
 .asteroid {
@@ -46,18 +53,22 @@ html {
     left: 600px;
     width: 100px;
     height: 100px;
-    animation: ship 6s ease-in-out infinite alternate;
+    animation: ship 12s infinite ease-in-out;
 }
 
 
-@keyframes zoom {
+@keyframes stars {
    
     0% {
-        transform: ;
+        transform: scale(1,1);
     }
         
+    50% {
+        transform: scale(1.25,1.25);
+    }
+    
     100%{
-        transform: ;
+        transform: scale(1,1);
     }
 }
 
@@ -75,10 +86,26 @@ html {
 @keyframes ship {
    
     0% {
-        transform: ;
+        transform: translate(0);
     }
-        
+       
+    20%{
+        transform: translateX(400px);
+    }
+    
+    40%{
+        transform: translateY(200px);
+    }
+    
+    60%{
+       transform: translateY(100px);
+    }
+    
+    80%{
+      transform: translateX (300px);
+    }
+    
     100%{
-        transform: ;
+       transform: translateY(100px);
     }
 }

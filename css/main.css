@@ -60,7 +60,6 @@ html {
     animation: ship 12s infinite ease-in-out;
 }
 
-
 @-webkit-keyframes stars {
     0% { -webkit-transform: scale(1,1);}
     50% {-webkit-transform: scale(1.25,1.25);}
